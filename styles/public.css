@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background: rgba(220, 182, 210, 1.0);
+    background: radial-gradient(at center, rgba(220, 182, 210, 1.0), rgba(255, 255, 255, 1.0));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amaranth';
+    }
+
+.welcome{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: radial-gradient(circle, rgba(215, 175, 31, 0.5) 0%, rgba(223, 207, 31, 0.5) 100%);
+}
+
+.container-title{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: inherit;
+}
+
+.container-title h1{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #ba17b4;
+    font-family: 'Poppins';
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-content p {
+    font-size: 20px;
+    color: #ce16ac;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.card-content br{
+    display: none;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    --glow-color: rgb(231, 167, 207);
+    --glow-spread-color: rgba(177, 84, 171, 0.226);
+    --enhanced-glow-color: rgba(173, 90, 183, 0.817);
+    --btn-color: rgb(194, 61, 203);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+   }
+
+   .card-content a{
+    text-decoration: none;
+    color: #4f0d77;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+
+
+

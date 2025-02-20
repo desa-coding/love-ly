@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Manis untuk Kamu 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: rgba(220, 182, 210, 1.0);
+            background: radial-gradient(at center, rgba(220, 182, 210, 1.0), rgba(255, 255, 255, 1.0));
+            color: #fff;
+            background-size: cover;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out;
+            animation: floating 3s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color:  #ba17b4;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: bold;
+            opacity: 1;
+            color: #ce16ac;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .fade {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        button {
+    --glow-color: rgb(231, 167, 207);
+    --glow-spread-color: rgba(177, 84, 171, 0.226);
+    --enhanced-glow-color: rgba(173, 90, 183, 0.817);
+    --btn-color: rgb(194, 61, 203);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+   }
+
+   .card-content a{
+    text-decoration: none;
+    color: #4f0d77;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+   .next{
+    text-decoration: none;
+    color: #4f0d77;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f3e7f5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 500px;
+    right: 204px;
+   }
+
+   .next:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+   }
+
+
+
+        /* Animasi Partikel Hati */
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: floatUp 3s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hai Cantikk! 😘</h1>
+        <p id="pesan">Klik tombol di bawah untuk lihat pesan manis buat kamu! 💕</p>
+        <button onclick="ubahPesan()">KLIK AKU 💖</button>
+    </div>
+
+    <a class="next" href="/pages/second.html">Yuk, Lanjut !🤩</a>
+
+    <!-- <audio id="bgMusic" loop>
+        <source src="#" type="audio/mpeg">
+    </audio> -->
+
+    <script>
+        const pesanArray = [
+            "Aku tahu kamu lelah, tapi aku selalu di sini buat nyemangatin kamu sayanggkuu! 😘",
+            "Kamu itu hebat banget! Jangan pernah ragu sama dirimu sendiri ya sayanggg! 💪💖",
+            "Senyum dulu yaa... Aku seneng banget lihat kamu bahagia! 😍",
+            "Kalau capek, istirahat sebentar ya cantinyaa akuu! Aku selalu bangga sama kamu! 💕",
+            "Inget yaa, Aku sayang kamu banget! Nggak akan pernah berubah! 😘",
+            "Kalau dunia terasa berat, inget ada aku yaa sayangg yang siap dengerin kamu kapan pun! 🤗",
+            "Jangan biarin lelah ngalahin kamu ya sayanggkuu! Kamu lebih kuat dari yang kamu kira! 💪💕"
+        ];
+
+        function ubahPesan() {
+            const pesanElement = document.getElementById("pesan");
+            pesanElement.classList.add("fade");
+
+            setTimeout(() => {
+                const pesanBaru = pesanArray[Math.floor(Math.random() * pesanArray.length)];
+                pesanElement.innerText = pesanBaru;
+                pesanElement.classList.remove("fade");
+            }, 500);
+
+            konfetiCinta();
+        }
+
+        // Musik otomatis main saat klik pertama
+        document.querySelector("button").addEventListener("click", function() {
+            document.getElementById("bgMusic").play();
+        });
+
+        function konfetiCinta() {
+            for (let i = 0; i < 10; i++) {
+                let heart = document.createElement("div");
+                heart.innerHTML = "❤️💕💖💗";
+                heart.classList.add("heart");
+
+                let xPos = Math.random() * window.innerWidth;
+                let yPos = Math.random() * window.innerHeight;
+
+                heart.style.left = `${xPos}px`;
+                heart.style.top = `${yPos + 100}px`;
+                heart.style.fontSize = `${Math.random() * 30 + 10}px`;
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }
+        }
+    </script>
+
+</body>
+</html>
